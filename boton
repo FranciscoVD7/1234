@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Simple</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #menu1, #menu2, #menu3 {
+            display: none;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button id="botonPrincipal" onclick="mostrarMenu()">Mostrar Menú</button>
+
+    <div id="menu1">
+        <button onclick="accionBoton(1)">Botón 1</button>
+        <button onclick="accionBoton(2)">Botón 2</button>
+        <button onclick="accionBoton(3)">Botón 3</button>
+    </div>
+
+    <script>
+        function mostrarMenu() {
+            document.getElementById("botonPrincipal").style.display = "none";
+            document.getElementById("menu1").style.display = "block";
+        }
+
+        function accionBoton(numeroBoton) {
+            alert("Has presionado el Botón " + numeroBoton);
+        }
+    </script>
+</body>
+</html>
